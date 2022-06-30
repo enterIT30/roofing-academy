@@ -1694,6 +1694,8 @@ body {
     transform: translateX(-50%);
     z-index: 0;
     padding-right: 65px;
+    transition: all 0.3s ease 0s;
+    
   }
   .sidebar.active {
     top: calc(50vh - 150px);
