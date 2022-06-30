@@ -95,6 +95,11 @@ body {
   flex-direction: column;
   overflow: auto;
 }
+@media (max-width: 580px) {
+  .wrapper {
+    overflow: hidden;
+  }
+}
 .wrapper > main {
   flex: 1 1 auto;
 }
@@ -461,7 +466,6 @@ body {
   }
 }
 
-
 .social-block__descr {
   position: relative;
   font-weight: 400;
@@ -737,7 +741,6 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     transition: right 0.3s ease 0s;
-    z-index: 20;
   }
 }
 @media (max-width: 1100px) and (min-width: 1600px) {
@@ -1105,12 +1108,99 @@ body {
 .popup__body {
   transform: scale(0);
   transition: all 0.3s ease 0s;
-  padding: 82px 85px;
   width: 100%;
   max-width: 550px;
   background-color: #f7f9fa;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
+}
+@media (min-width: 1600px) {
+  .popup__body {
+    padding-top: 82px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (padding-top: clamp( 30px , 17px  +  4.0625vw , 82px )) {
+    .popup__body {
+      padding-top: clamp( 30px , 17px  +  4.0625vw , 82px );
+    }
+  }
+  @supports not (padding-top: clamp( 30px , 17px  +  4.0625vw , 82px )) {
+    .popup__body {
+      padding-top: calc(30px + 3.25 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .popup__body {
+    padding-top: 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .popup__body {
+    padding-bottom: 82px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (padding-bottom: clamp( 30px , 17px  +  4.0625vw , 82px )) {
+    .popup__body {
+      padding-bottom: clamp( 30px , 17px  +  4.0625vw , 82px );
+    }
+  }
+  @supports not (padding-bottom: clamp( 30px , 17px  +  4.0625vw , 82px )) {
+    .popup__body {
+      padding-bottom: calc(30px + 3.25 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .popup__body {
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .popup__body {
+    padding-left: 85px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (padding-left: clamp( 30px , 16.25px  +  4.296875vw , 85px )) {
+    .popup__body {
+      padding-left: clamp( 30px , 16.25px  +  4.296875vw , 85px );
+    }
+  }
+  @supports not (padding-left: clamp( 30px , 16.25px  +  4.296875vw , 85px )) {
+    .popup__body {
+      padding-left: calc(30px + 3.4375 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .popup__body {
+    padding-left: 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .popup__body {
+    padding-right: 85px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (padding-right: clamp( 30px , 16.25px  +  4.296875vw , 85px )) {
+    .popup__body {
+      padding-right: clamp( 30px , 16.25px  +  4.296875vw , 85px );
+    }
+  }
+  @supports not (padding-right: clamp( 30px , 16.25px  +  4.296875vw , 85px )) {
+    .popup__body {
+      padding-right: calc(30px + 3.4375 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .popup__body {
+    padding-right: 30px;
+  }
 }
 .popup__close {
   width: 20px;
@@ -1165,25 +1255,88 @@ body {
 
 .popup-order__title {
   font-weight: 500;
-  font-size: 30px;
   line-height: 1;
   text-align: center;
   letter-spacing: 0.02em;
   margin-bottom: 14px;
 }
+@media (min-width: 1600px) {
+  .popup-order__title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (font-size: clamp( 20px , 17.5px  +  0.78125vw , 30px )) {
+    .popup-order__title {
+      font-size: clamp( 20px , 17.5px  +  0.78125vw , 30px );
+    }
+  }
+  @supports not (font-size: clamp( 20px , 17.5px  +  0.78125vw , 30px )) {
+    .popup-order__title {
+      font-size: calc(20px + 0.625 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .popup-order__title {
+    font-size: 20px;
+  }
+}
 .popup-order__descr {
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.5;
   text-align: center;
   margin-bottom: 24px;
 }
+@media (min-width: 1600px) {
+  .popup-order__descr {
+    font-size: 16px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (font-size: clamp( 13px , 12.25px  +  0.234375vw , 16px )) {
+    .popup-order__descr {
+      font-size: clamp( 13px , 12.25px  +  0.234375vw , 16px );
+    }
+  }
+  @supports not (font-size: clamp( 13px , 12.25px  +  0.234375vw , 16px )) {
+    .popup-order__descr {
+      font-size: calc(13px + 0.1875 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .popup-order__descr {
+    font-size: 13px;
+  }
+}
 .popup-order__mode {
   font-weight: 400;
-  font-size: 12px;
   line-height: 1.25;
   text-align: center;
   margin-bottom: 28px;
+}
+@media (min-width: 1600px) {
+  .popup-order__mode {
+    font-size: 12px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (font-size: clamp( 10px , 9.5px  +  0.15625vw , 12px )) {
+    .popup-order__mode {
+      font-size: clamp( 10px , 9.5px  +  0.15625vw , 12px );
+    }
+  }
+  @supports not (font-size: clamp( 10px , 9.5px  +  0.15625vw , 12px )) {
+    .popup-order__mode {
+      font-size: calc(10px + 0.125 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .popup-order__mode {
+    font-size: 10px;
+  }
 }
 .popup-order__button {
   width: 100%;
@@ -1203,7 +1356,6 @@ body {
 .form__input {
   width: 100%;
   padding: 24px 135px 24px 46px;
-  margin-bottom: 48px;
   background: #fff;
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
   border-radius: 500px;
@@ -1214,6 +1366,116 @@ body {
   letter-spacing: 0.02em;
   color: #a7a7a7;
 }
+@media (min-width: 1600px) {
+  .form__input {
+    padding-top: 24px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (padding-top: clamp( 12px , 9px  +  0.9375vw , 24px )) {
+    .form__input {
+      padding-top: clamp( 12px , 9px  +  0.9375vw , 24px );
+    }
+  }
+  @supports not (padding-top: clamp( 12px , 9px  +  0.9375vw , 24px )) {
+    .form__input {
+      padding-top: calc(12px + 0.75 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .form__input {
+    padding-top: 12px;
+  }
+}
+@media (min-width: 1600px) {
+  .form__input {
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (padding-bottom: clamp( 12px , 9px  +  0.9375vw , 24px )) {
+    .form__input {
+      padding-bottom: clamp( 12px , 9px  +  0.9375vw , 24px );
+    }
+  }
+  @supports not (padding-bottom: clamp( 12px , 9px  +  0.9375vw , 24px )) {
+    .form__input {
+      padding-bottom: calc(12px + 0.75 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .form__input {
+    padding-bottom: 12px;
+  }
+}
+@media (min-width: 1600px) {
+  .form__input {
+    padding-left: 46px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (padding-left: clamp( 23px , 17.25px  +  1.796875vw , 46px )) {
+    .form__input {
+      padding-left: clamp( 23px , 17.25px  +  1.796875vw , 46px );
+    }
+  }
+  @supports not (padding-left: clamp( 23px , 17.25px  +  1.796875vw , 46px )) {
+    .form__input {
+      padding-left: calc(23px + 1.4375 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .form__input {
+    padding-left: 23px;
+  }
+}
+@media (min-width: 1600px) {
+  .form__input {
+    padding-right: 46px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (padding-right: clamp( 23px , 17.25px  +  1.796875vw , 46px )) {
+    .form__input {
+      padding-right: clamp( 23px , 17.25px  +  1.796875vw , 46px );
+    }
+  }
+  @supports not (padding-right: clamp( 23px , 17.25px  +  1.796875vw , 46px )) {
+    .form__input {
+      padding-right: calc(23px + 1.4375 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .form__input {
+    padding-right: 23px;
+  }
+}
+@media (min-width: 1600px) {
+  .form__input {
+    margin-bottom: 48px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (margin-bottom: clamp( 15px , 6.75px  +  2.578125vw , 48px )) {
+    .form__input {
+      margin-bottom: clamp( 15px , 6.75px  +  2.578125vw , 48px );
+    }
+  }
+  @supports not (margin-bottom: clamp( 15px , 6.75px  +  2.578125vw , 48px )) {
+    .form__input {
+      margin-bottom: calc(15px + 2.0625 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .form__input {
+    margin-bottom: 15px;
+  }
+}
 
 .checkbox {
   display: flex;
@@ -1222,9 +1484,30 @@ body {
 }
 .checkbox__text {
   font-weight: 500;
-  font-size: 12px;
   line-height: 1.75;
   align-items: center;
+}
+@media (min-width: 1600px) {
+  .checkbox__text {
+    font-size: 12px;
+  }
+}
+@media (min-width: 320px) and (max-width: 1600px) {
+  @supports (font-size: clamp( 10px , 9.5px  +  0.15625vw , 12px )) {
+    .checkbox__text {
+      font-size: clamp( 10px , 9.5px  +  0.15625vw , 12px );
+    }
+  }
+  @supports not (font-size: clamp( 10px , 9.5px  +  0.15625vw , 12px )) {
+    .checkbox__text {
+      font-size: calc(10px + 0.125 * (100vw - 320px) / 80);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .checkbox__text {
+    font-size: 10px;
+  }
 }
 .checkbox__text a {
   color: #F38120;
@@ -1234,13 +1517,6 @@ body {
   background: url(../img/prev-bgi.jpg) no-repeat center/cover;
   height: 100vh;
   z-index: 20;
-
-}
-
-@media (max-width: 580px){
-  .wrapper {
-    overflow: hidden;
-  }
 }
 
 .main {
@@ -1578,7 +1854,8 @@ body {
   background-color: #fff;
   box-shadow: 0px 0px 75px rgba(0, 0, 0, 0.03);
   border-radius: 20px;
-  z-index: 0;
+  z-index: 5;
+  transition: all 0.3s ease 0s;
 }
 @media (min-width: 1600px) {
   .sidebar {
@@ -1694,8 +1971,6 @@ body {
     transform: translateX(-50%);
     z-index: 0;
     padding-right: 65px;
-    transition: all 0.3s ease 0s;
-    
   }
   .sidebar.active {
     top: calc(50vh - 150px);
@@ -1739,7 +2014,36 @@ body {
     height: 9px;
   }
 }
+.sidebar__pulse {
+  display: none;
+  position: absolute;
+  background-color: #F38120;
+  border-radius: 50%;
+  top: 10px;
+  right: 14px;
+  z-index: 32;
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+  animation: pulse 1s infinite linear;
+}
+@media (max-width: 580px) {
+  .sidebar__pulse {
+    display: block;
+  }
+}
 
+@keyframes pulse {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
 .sidebar-item {
   position: relative;
 }
